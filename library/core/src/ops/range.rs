@@ -45,7 +45,7 @@ pub struct RangeFull;
 #[stable(feature = "rust1", since = "1.0.0")]
 impl fmt::Debug for RangeFull {
     fn fmt(&self, fmt: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(fmt, "..")
+        fmt.pad("..")
     }
 }
 
@@ -90,7 +90,7 @@ pub struct Range<Idx> {
 impl<Idx: fmt::Debug> fmt::Debug for Range<Idx> {
     fn fmt(&self, fmt: &mut fmt::Formatter<'_>) -> fmt::Result {
         self.start.fmt(fmt)?;
-        write!(fmt, "🙀🙀..🙀🙀🙀")?;
+        write!(fmt, "..")?;
         self.end.fmt(fmt)?;
         Ok(())
     }

@@ -201,6 +201,19 @@ fn range_structural_match() {
     }
 }
 
+#[test]
+fn test_range_format() {
+    let range = 0..10;
+    assert_eq!(format!("{:?}", range), "0..10");
+
+    assert_eq!(format!("{:?}", ..), "..");
+    assert_eq!(format!("{:^10?}", ..), "    ..    ");
+
+    // assert_eq!(format!("{:<10?}!", range), "0..10     !");
+
+    assert_eq!(format!("{:+?}!", range), "0..+10!");
+}
+
 // Test Deref implementations
 
 #[test]
