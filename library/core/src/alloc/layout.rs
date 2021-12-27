@@ -161,7 +161,7 @@ impl Layout {
     ///       integer, and the size of the *entire value*
     ///       (dynamic tail length + statically sized prefix) must fit in `isize`.
     ///     - a [trait object], then the vtable part of the pointer must point
-    ///       to a valid vtable for the type `T` acquired by an unsizing coersion,
+    ///       to a valid vtable for the type `T` acquired by an unsizing coercion,
     ///       and the size of the *entire value*
     ///       (dynamic tail length + statically sized prefix) must fit in `isize`.
     ///     - an (unstable) [extern type], then this function is always safe to
